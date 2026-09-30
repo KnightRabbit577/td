@@ -29,7 +29,7 @@ const ENEMIES = {
   runner:  { hp:28,   speed:105, r:8,  reward:5,   color:'#a3e635' }, // zombie rapide
   soldier: { hp:70,   speed:62,  r:10, reward:9,   color:'#60a5fa' }, // équilibré
   tank:    { hp:320,  speed:34,  r:15, reward:26,  color:'#94a3b8' }, // lent et solide
-  boss:    { hp:1500, speed:26,  r:24, reward:200, color:'#ef4444' }  // toutes les 5 vagues
+  boss:    { hp:1300, speed:24,  r:24, reward:200, color:'#ef4444' }  // toutes les 5 vagues
 };
 
 /* ---------- RACCOURCIS DOM ---------- */
