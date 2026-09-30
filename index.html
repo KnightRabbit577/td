@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Base Defense</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- Barre du haut : logo, statistiques, actions -->
+  <header id="hud" class="glass">
+    <div class="brand">
+      <span class="logo">🛡️</span>
+      <div><b>BASE DEFENSE</b><small>Survis à la horde</small></div>
+    </div>
+
+    <div class="stats">
+      <div class="stat money"><span class="ic">💰</span>
+        <div><small>Argent</small><b id="money">0</b></div></div>
+
+      <div class="stat life"><span class="ic">❤️</span>
+        <div><small>Base</small><b id="life">0</b>
+          <div class="meter"><i id="lifeFill"></i></div></div></div>
+
+      <div class="stat wave"><span class="ic">🌊</span>
+        <div><small>Vague</small><b id="wave">0</b>
+          <div class="meter"><i id="waveFill"></i></div></div></div>
+
+      <div class="stat"><span class="ic">👾</span>
+        <div><small>Restants</small><b id="left">0</b></div></div>
+
+      <div class="stat"><span class="ic">⭐</span>
+        <div><small>Score</small><b id="score">0</b></div></div>
+    </div>
+
+    <div class="actions">
+      <button id="btnWave" class="primary">▶ Vague suivante</button>
+      <button id="btnSpeed" title="Vitesse du jeu">x1</button>
+      <button id="btnPause">⏸ Pause</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Zone de jeu -->
+    <div id="stage">
+      <canvas id="game" width="960" height="600"></canvas>
+      <div id="overlay" class="hidden">
+        <div class="box">
+          <h2 id="ovTitle"></h2>
+          <p id="ovText"></p>
+          <button id="ovBtn" class="primary"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panneau latéral -->
+    <aside id="side" class="glass">
+      <h3>Arsenal</h3>
+      <div id="shop"></div>
+      <h3>Détails</h3>
+      <div id="info"></div>
+      <div id="records"></div>
+      <small class="hint"><kbd>1</kbd>-<kbd>4</kbd> tourelles · <kbd>Échap</kbd> annuler · <kbd>P</kbd> pause</small>
+    </aside>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
